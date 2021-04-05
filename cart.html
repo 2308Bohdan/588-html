@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="icon" href="img/baby-yoda.svg">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home Page</a>
+        </nav>
+        <h1>Sticerz - Cart</h1>
+    </header>
+    <main>
+        <h2>Products</h2>
+        <table>
+            <tr>
+                <td>
+                    <img width="20" src="img/baby-yoda.svg" alt="Baby Yoda">
+                </td>
+                <td>Baby Yoda</td>
+                <td>
+                    <input type="number" value="2" min="1">
+                </td>
+                <td>
+                    $178.00USD
+                </td>
+                <td>
+                    🗑
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img width="20" src="img/banana.svg" alt="Banana">
+                </td>
+                <td>Banana</td>
+                <td>
+                    <input type="number" value="1" min="1">
+                </td>
+                <td>
+                    $278.00USD
+                </td>
+                <td>
+                    🗑
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">Total: 8756563</td>
+            </tr>
+        </table>
+        <h2>Place an order</h2>
+        <form action="https://formspree.io/f/xqkwkqew" method="POST">
+            <label>
+                Name*
+                <input type="text" name="user-name" placeholder="Your name" required>
+            </label>
+            <br>
+            <label>
+                Email*
+                <input type="email" name="user-email" placeholder="Your email address" required>
+            </label>
+            <br>
+            <label>
+                Phone*
+                <input type="tel" name="user-number" placeholder="Your phone" required>
+            </label>
+            <label>
+                Comment
+                <textarea name="comment" id="" cols="30" rows="4">
+                </textarea>
+            </label>
+            <br>
+            <input type="submit" value="order">
+        </form>
+        <a href="#">Continue shopping</a>
+    </main>
+</body>
+</html>
