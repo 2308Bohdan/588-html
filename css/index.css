@@ -1,41 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-}
+} 
+
 :root {
-    font-family: 'Fredoka One', cursive;
-    --main-color: rgb(44, 143, 143);
-    --accent-color: cadetblue;
+    font-family: 'DotGothic16', sans-serif;
+    --main-color: black;
+    --accent-color: rgba(50, 206, 211, 1);
+    scroll-behavior: smooth;
 }
-h1, h2 {
-    color: var(--main-color);
-}
-.menu a {
-    display: block;
+ 
+body {
+    max-width: 980px;
+    margin: auto;
 }
 
-.logo {
+header nav .logo,
+header .banner h1 {
     color: var(--main-color);
-    font-size: 48px;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    text-align: center;
 }
-img {
-    max-width: 400px;
+
+header .menu a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-color);
 }
-#home {
-    margin-top: 100px;
+
+header .menu a:hover {
+    font-weight: bold;
 }
-header#home {
-    margin-top: 10px;
+
+@media (min-width: 480px) {
+    header nav {
+        display: flex;
+    }
+
+    header .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex: 1;
+    }
 }
-article.product p {
-    font-family: 'Fredoka One', cursive;
+
+header .banner {
+    background-image: url(../img/baby-yoda.svg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 400px;
 }
-p:hover {
-    text-decoration: underline;
-}
-p::first-letter {
-    font-size: 24px;
+header .banner h1 {
     color: var(--accent-color);
+}
+.product-list .product {
+    border: 1px solid var(--main-color);
+    padding: 5px;
+}
+.product-list .product img {
+    display: block;
+    width: 100%;
+}
+
+.product-list .product .button {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (min-width: 400px) {
+    .product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    }
+}
+
+@media (min-width: 660px) {
+    .product-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (min-width: 980px) {
+    .product-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.button {
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.7s;
+    background-color: transparent;
+}
+.button:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    cursor: pointer;
 }
