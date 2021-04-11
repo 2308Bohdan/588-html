@@ -52,12 +52,13 @@ header .menu a:hover {
 header .banner {
     background-image: url(../img/baby-yoda.svg);
     background-size: cover;
+    min-height: 400px;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 400px;
+    
 }
 header .banner h1 {
     color: var(--accent-color);
@@ -71,12 +72,12 @@ header .banner h1 {
     width: 100%;
 }
 
-.product-list .product .button {
+.product-list .product .buttons {
     display: flex;
     justify-content: space-around;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 440px) {
     .product-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -95,6 +96,13 @@ header .banner h1 {
     }
 }
 
+.contact-form label {
+    min-width: 100px;
+    display: inline-block;
+}
+
+/*Controls*/
+
 .button {
     padding: 0.35em 1.2em;
     border: 0.1em solid #FFFFFF;
@@ -108,6 +116,10 @@ header .banner h1 {
 }
 .button:hover {
     color: #000000;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     cursor: pointer;
+}
+.card-button {
+    border-color: black;
+    color: black;
 }
